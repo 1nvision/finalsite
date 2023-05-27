@@ -1,0 +1,59 @@
+body,
+html {
+  margin: 0px;
+  padding: 0px;
+  position: fixed;
+  background: black;
+  -webkit-text-size-adjust: 100%;
+}
+
+div.borderXwidth {
+  text-align: center;
+  padding-top: 15px;
+  padding-bottom: 0px;
+  margin-right: 12px;
+}
+
+div.borderXwidth a {
+  color: #ffffff;
+  text-decoration: none;
+  text-align: center;
+  font: 20px Raleway;
+  margin: 0px 10px;
+  padding: 10px 10px;
+  position: relative;
+  z-index: 0;
+  cursor: pointer;
+}
+// initial appearance as well as behavior of the text before and after
+div.borderXwidth a:before, div.borderXwidth a:after {
+  position: absolute;
+  opacity: 0;
+  width: 0%;
+  height: 2px;
+  content: "";
+  background: #ffffff;
+  transition: all 0.3s;
+}
+
+div.borderXwidth a:before {
+  left: 0px;
+  top: 0px;
+}
+
+div.borderXwidth a:after {
+  right: 0px;
+  bottom: 0px;
+}
+
+div.borderXwidth a:hover:before, div.borderXwidth a:hover:after {
+  opacity: 1;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  section {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+}
