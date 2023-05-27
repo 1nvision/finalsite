@@ -1,0 +1,87 @@
+caption {
+  caption-side: top;
+}
+
+.table-dark {
+  --bs-table-bg: #303030;
+}
+
+.img-container {
+  position: relative;
+  width: 500px;
+  height: 500px;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.img-container img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.7s ease-in;
+}
+
+div.borderXwidth {
+  text-align: center;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+div.borderXwidth a {
+  color: #000000;
+  text-decoration: none;
+  text-align: center;
+  font: 20px Raleway;
+  margin: 0px 10px;
+  padding: 10px 10px;
+  position: relative;
+  z-index: 0;
+  cursor: pointer;
+}
+
+div.borderXwidth a:before, div.borderXwidth a:after {
+  position: absolute;
+  opacity: 0;
+  width: 0%;
+  height: 2px;
+  content: "";
+  background: #000000;
+  transition: all 0.3s;
+}
+
+div.borderXwidth a:before {
+  left: 0px;
+  top: 0px;
+}
+
+div.borderXwidth a:after {
+  right: 0px;
+  bottom: 0px;
+}
+
+div.borderXwidth a:hover:before, div.borderXwidth a:hover:after {
+  opacity: 1;
+  width: 100%;
+}
+
+.img-container:hover img.top {
+  opacity: 0;
+  filter: blur(20px) brightness(200%);
+}
+
+.btn:hover {
+  box-shadow: 0 0 10px #181717;
+  opacity: 80%;
+}
+
+@media (max-width: 768px) {
+  section {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+}/*# sourceMappingURL=custom.css.map */
